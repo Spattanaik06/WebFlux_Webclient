@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Ticket List</title>
+<!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+<form th:action="@{/ticket}" th:object="${passenger}" method="post">
+	<label>Enter The Name </label>
+	<input type="text" th:field="*{name}" placeholder="Enter The Name"><br>
+	<label>Enter the Email Id</label>
+	<input type="text" th:field="*{email}"placeholder="Enter The Email Id"><br>
+	<label>Enter The Phone Number </label>
+	<input type="text" th:field="*{phoneNo}" placeholder="Enter The Phone Number"><br>
+	<label>Enter The Date Of Journey </label>
+	<input type="text" th:field="*{doj}" placeholder="Enter The Date Of Journey"><br>
+	<label>Enter The Train Number </label>
+	<input type="text" th:field="*{trainNumber}" placeholder="Enter The Train Number"><br>
+	<label>Enter The Start Point </label>
+	<input type="text" th:field="*{startPoint}" placeholder="Enter The Start Point"><br>
+	<label>Enter The Destination Point </label>
+	<input type="text" th:field="*{endPoint}" placeholder="Enter The Destination Point"><br>
+	<button type="submit" class="btn btn-info">Submit</button>
+	
+	<a href="alltickets" class="btn btn-warning">View Ticket</a>
+</form>
+</div>
+
+</body>
+</html>
